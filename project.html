@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project Saya</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body.light {
+      background-color: cyan;
+      color: #000;
+    }
+
+    body.dark {
+      background-color: #111;
+      color: #fff;
+    }
+
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .navbar {
+      background-color: black;
+      padding: 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .navbar a {
+      color: cyan;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: black;
+      color: cyan;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: cyan;
+      color: black;
+    }
+
+    .project-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+      text-align: left;
+    }
+
+    .project-card a {
+      color: black;
+      background-color: cyan;
+      padding: 5px 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .project-card a:hover {
+      background-color: black;
+      color: cyan;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="project.html">Project</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+
+  <button onclick="toggledarkmode()">GANTI TEMA</button>
+
+  <div class="container">
+    <h1>Project Saya</h1>
+
+    <div class="project-card">
+      <h3>🛒 Website Toko</h3>
+      <p>Web jualan sederhana pake HTML & CSS. Cocok buat latihan dasar frontend.</p>
+      <a href="https://iamxy002.github.io/toko/" target="_blank">Lihat Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>💼 Web Portofolio Interaktif</h3>
+      <p>Web pribadi dengan fitur interaktif seperti dark mode, skill toggle, dan form.</p>
+      <a href="https://iamxy002.github.io/porto/" target="_blank">Lihat Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>📐 Flexbox Layout</h3>
+      <p>Contoh layout responsive dengan Flexbox untuk latihan struktur halaman.</p>
+      <a href="https://iamxy002.github.io/flexbox/" target="_blank">Lihat Project</a>
+    </div>
+  </div>
+
+  <script>
+    document.body.classList.add("light");
+
+    function toggledarkmode() {
+      document.body.classList.toggle("dark");
+      document.body.classList.toggle("light");
+    }
+  </script>
+
+</body>
+</html>
